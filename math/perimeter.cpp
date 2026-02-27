@@ -26,7 +26,7 @@ namespace math {
  */
 template <typename T>
 T square_perimeter(T length) {
-    return 4 * length;
+    return 4 * length;  // 4(l) -> SQUARE
 }
 
 /**
@@ -37,8 +37,8 @@ T square_perimeter(T length) {
  * @returns perimeter of the rectangle
  */
 template <typename T>
-T rect_perimeter(T length, T width) {
-    return 2 * (length + width);
+T rectangle_perimeter(T length, T width) {
+    return 2 * (length + width);  // 2(l+b) -> RECTANGLE
 }
 
 /**
@@ -50,7 +50,7 @@ T rect_perimeter(T length, T width) {
  */
 template <typename T>
 T triangle_perimeter(T base, T height, T hypotenuse) {
-    return base + height + hypotenuse;
+    return base + height + hypotenuse; // b+h+H -> TRIANGLE
 }
 
 /**
@@ -61,7 +61,7 @@ T triangle_perimeter(T base, T height, T hypotenuse) {
  */
 template <typename T>
 T circle_perimeter(T radius) {
-    return 2 * M_PI * radius;
+    return 2 * M_PI * radius; // 2 (pi)(r) -> CIRCLE
 }
 
 /**
@@ -73,7 +73,7 @@ T circle_perimeter(T radius) {
  */
 template <typename T>
 T parallelogram_perimeter(T base, T height) {
-    return 2 * (base + height);
+    return 2 * (base + height); // 2(b+h) -> PARALLELOGRAM
 }
 
 /**
@@ -84,7 +84,7 @@ T parallelogram_perimeter(T base, T height) {
  */
 template <typename T>
 T cube_surface_perimeter(T length) {
-    return 12 * length;
+    return 12 * length; // 12(l) -> CUBE
 }
 
 /**
@@ -97,7 +97,7 @@ T cube_surface_perimeter(T length) {
  */
 template <typename T>
 T n_polygon_surface_perimeter(T sides, T length) {
-    return sides * length;
+    return sides * length; // s(l) -> n SIDED POLYGON
 }
 
 /**
@@ -109,7 +109,7 @@ T n_polygon_surface_perimeter(T sides, T length) {
  */
 template <typename T>
 T cylinder_surface_perimeter(T radius, T height) {
-    return (2 * radius) + (2 * height);
+    return (2 * radius) + (2 * height); // 2(r) + 2(h) -> CYLINDER
 }
 }  // namespace math
 
@@ -167,7 +167,7 @@ static void test() {
     int_length = 4;
     int_width = 7;
     int_expected = 22;
-    int_perimeter = math::rect_perimeter(int_length, int_width);
+    int_perimeter = math::rectangle_perimeter(int_length, int_width);
 
     std::cout << "perimeter OF A RECTANGLE (int)" << std::endl;
     std::cout << "Input Length: " << int_length << std::endl;
@@ -181,7 +181,7 @@ static void test() {
     double_length = 2.5;
     double_width = 5.7;
     double_expected = 16.4;
-    double_perimeter = math::rect_perimeter(double_length, double_width);
+    double_perimeter = math::rectangle_perimeter(double_length, double_width);
 
     std::cout << "perimeter OF A RECTANGLE (double)" << std::endl;
     std::cout << "Input Length: " << double_length << std::endl;
