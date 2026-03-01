@@ -25,8 +25,8 @@ namespace math {
  * @return true if number is a factorial returns true
  * @return false if number is not a factorial
  */
-bool is_factorial(uint64_t n) {
-    if (n <= 0) {  // factorial numbers are only ever positive Integers
+bool is_factorial(uint64_t num) {
+    if (num <= 0) {  // factorial numbers are only ever positive Integers
         return false;
     }
 
@@ -36,8 +36,8 @@ bool is_factorial(uint64_t n) {
      * no impact division wise
      */
     int i = 2;
-    while (n % i == 0) {
-        n = n / i;
+    while (num % i == 0) {
+        num = num / i;
         i++;
     }
 
@@ -45,7 +45,7 @@ bool is_factorial(uint64_t n) {
      * if n was the sum of a factorial then it should be divided until it
      * becomes 1
      */
-    return (n == 1);
+    return (num == 1);
 }
 }  // namespace math
 
