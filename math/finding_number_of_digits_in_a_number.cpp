@@ -28,15 +28,15 @@
  * @param n the number to check its digits
  * @returns the digits count
  */
-uint64_t finding_number_of_digits_in_a_number(uint64_t n) {
+uint64_t finding_number_of_digits_in_a_number(uint64_t num) {
     uint64_t count = 0;  ///< the variable used for the digits count
 
     // iterate until `n` becomes 0
     // remove last digit from `n` in each iteration
     // increase `count` by 1 in each iteration
-    while (n != 0) {
+    while (num != 0) {
         // we can also use `n = n / 10`
-        n /= 10;
+        num /= 10;
         // each time the loop is running, `count` will be incremented by 1.
         ++count;
     }
@@ -51,18 +51,18 @@ uint64_t finding_number_of_digits_in_a_number(uint64_t n) {
  * @param n the number to check its digits
  * @returns the digits count
  */
-double finding_number_of_digits_in_a_number_using_log(double n) {
+double finding_number_of_digits_in_a_number_using_log(double num) {
     // log(0) is undefined
-    if (n == 0) {
+    if (num == 0) {
         return 0;
     }
 
     // to handle the negative numbers
-    if (n < 0) {
-        n = -n;
+    if (num < 0) {
+        num = -num;
     }
 
-    double count = floor(log10(n) + 1);
+    double count = floor(log10(num) + 1);
 
     return count;
 }
