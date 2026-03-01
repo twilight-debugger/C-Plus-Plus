@@ -27,7 +27,7 @@ namespace math {
  */
 template <typename T>
 T square_area(T length) {
-    return length * length;
+    return length * length; // A = l^2 -> SQUARE
 }
 
 /**
@@ -38,7 +38,7 @@ T square_area(T length) {
  */
 template <typename T>
 T rect_area(T length, T width) {
-    return length * width;
+    return length * width; // A = l(b) -> RECTANGLE
 }
 
 /**
@@ -50,7 +50,7 @@ T rect_area(T length, T width) {
  */
 template <typename T>
 T triangle_area(T base, T height) {
-    return base * height / 2;
+    return base * height / 2; // A = b(h) /2 -> TRIANGLE
 }
 
 /**
@@ -61,7 +61,7 @@ T triangle_area(T base, T height) {
  */
 template <typename T>
 T circle_area(T radius) {
-    return M_PI * pow(radius, 2);
+    return M_PI * pow(radius, 2); // A = pi (r^2) -> CIRCLE
 }
 
 /**
@@ -73,7 +73,7 @@ T circle_area(T radius) {
  */
 template <typename T>
 T parallelogram_area(T base, T height) {
-    return base * height;
+    return base * height; // A = b(h) -> PARALLELOGRAM
 }
 
 /**
@@ -84,7 +84,7 @@ T parallelogram_area(T base, T height) {
  */
 template <typename T>
 T cube_surface_area(T length) {
-    return 6 * length * length;
+    return 6 * length * length; // A = 6(l)(b) -> CUBE
 }
 
 /**
@@ -95,7 +95,7 @@ T cube_surface_area(T length) {
  */
 template <typename T>
 T sphere_surface_area(T radius) {
-    return 4 * M_PI * pow(radius, 2);
+    return 4 * M_PI * pow(radius, 2); // A = 4 * pi (r^2) -> SPHERE
 }
 
 /**
@@ -107,7 +107,7 @@ T sphere_surface_area(T radius) {
  */
 template <typename T>
 T cylinder_surface_area(T radius, T height) {
-    return 2 * M_PI * radius * height + 2 * M_PI * pow(radius, 2);
+    return 2 * M_PI * radius * height + 2 * M_PI * pow(radius, 2); // A = 2 * pi * r * h + 2 * pi * (r^2) -> CYLINDER
 }
 
 /**
@@ -119,7 +119,7 @@ T cylinder_surface_area(T radius, T height) {
  */
 template <typename T>
 T hemi_sphere_surface_area(T radius) {
-    return 3 * M_PI * pow(radius, 2);
+    return 3 * M_PI * pow(radius, 2); // A = 3 * pi * (r^2)
 }
 }  // namespace math
 
@@ -157,7 +157,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_area << std::endl;
     assert(int_area == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 2nd test
     float_length = 2.5;
@@ -169,7 +169,7 @@ static void test() {
     std::cout << "Expected Output: " << float_expected << std::endl;
     std::cout << "Output: " << float_area << std::endl;
     assert(float_area == float_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 3rd test
     int_length = 4;
@@ -183,7 +183,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_area << std::endl;
     assert(int_area == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 4th test
     double_length = 2.5;
@@ -197,7 +197,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_area << std::endl;
     assert(double_area == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 5th test
     int_base = 10;
@@ -211,7 +211,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_area << std::endl;
     assert(int_area == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 6th test
     double_radius = 6;
@@ -225,7 +225,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_area << std::endl;
     assert(double_area == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 7th test
     int_base = 6;
@@ -239,7 +239,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_area << std::endl;
     assert(int_area == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 8th test
     double_length = 5.5;
@@ -251,7 +251,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_area << std::endl;
     assert(double_area == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 9th test
     double_radius = 10.0;
@@ -264,7 +264,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_area << std::endl;
     assert(double_area == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 10th test
     double_radius = 4.0;
@@ -278,7 +278,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_area << std::endl;
     assert(double_area == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 11th test
     double_radius = 10.0;
@@ -290,7 +290,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_area << std::endl;
     assert(double_area == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 }
 
 /**
