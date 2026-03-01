@@ -26,7 +26,7 @@ namespace math {
  */
 template <typename T>
 T cube_volume(T length) {
-    return std::pow(length, 3);
+    return std::pow(length, 3); // V = l^3 -> CUBE
 }
 
 /**
@@ -39,7 +39,7 @@ T cube_volume(T length) {
  */
 template <typename T>
 T rect_prism_volume(T length, T width, T height) {
-    return length * width * height;
+    return length * width * height; // V = l*b*h -> RECTANGLE
 }
 
 /**
@@ -51,7 +51,7 @@ T rect_prism_volume(T length, T width, T height) {
  */
 template <typename T>
 T cone_volume(T radius, T height, double PI = 3.14) {
-    return std::pow(radius, 2) * PI * height / 3;
+    return std::pow(radius, 2) * PI * height / 3; // V = pi * r^2 * (h/2) -> CONE
 }
 
 /**
@@ -65,7 +65,7 @@ T cone_volume(T radius, T height, double PI = 3.14) {
  */
 template <typename T>
 T triangle_prism_volume(T base, T height, T depth) {
-    return base * height * depth / 2;
+    return base * height * depth / 2; // V = b*h*d -> TRAINGULAR PRISM
 }
 
 /**
@@ -78,7 +78,7 @@ T triangle_prism_volume(T base, T height, T depth) {
  */
 template <typename T>
 T pyramid_volume(T length, T width, T height) {
-    return length * width * height / 3;
+    return length * width * height / 3; // V = l*b*h -> PYRAMID
 }
 
 /**
@@ -89,7 +89,7 @@ T pyramid_volume(T length, T width, T height) {
  */
 template <typename T>
 T sphere_volume(T radius, double PI = 3.14) {
-    return PI * std::pow(radius, 3) * 4 / 3;
+    return PI * std::pow(radius, 3) * 4 / 3; // V = (4/3)*pi*r^3 -> SPHERE
 }
 
 /**
@@ -101,7 +101,7 @@ T sphere_volume(T radius, double PI = 3.14) {
  */
 template <typename T>
 T cylinder_volume(T radius, T height, double PI = 3.14) {
-    return PI * std::pow(radius, 2) * height;
+    return PI * std::pow(radius, 2) * height; // V = pi*r^2*h -> CYLINDER
 }
 }  // namespace math
 
@@ -137,7 +137,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_volume << std::endl;
     assert(int_volume == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 2nd test
     int_length = 4;
@@ -153,7 +153,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_volume << std::endl;
     assert(int_volume == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 3rd test
     double_radius = 5;
@@ -167,7 +167,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_volume << std::endl;
     assert(double_volume == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 4th test
     int_base = 3;
@@ -183,7 +183,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_volume << std::endl;
     assert(int_volume == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 5th test
     int_length = 10;
@@ -199,7 +199,7 @@ static void test() {
     std::cout << "Expected Output: " << int_expected << std::endl;
     std::cout << "Output: " << int_volume << std::endl;
     assert(int_volume == int_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 6th test
     double_radius = 3;
@@ -211,7 +211,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_volume << std::endl;
     assert(double_volume == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 
     // 7th test
     double_radius = 5;
@@ -225,7 +225,7 @@ static void test() {
     std::cout << "Expected Output: " << double_expected << std::endl;
     std::cout << "Output: " << double_volume << std::endl;
     assert(double_volume == double_expected);
-    std::cout << "TEST PASSED" << std::endl << std::endl;
+    std::cout << "TEST PASSED!" << std::endl << std::endl;
 }
 
 /**
