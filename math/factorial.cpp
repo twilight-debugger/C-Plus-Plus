@@ -26,14 +26,14 @@ namespace math {
  * @warning Maximum value for the parameter is 20 as 21!
  * cannot be represented in 64 bit unsigned int
  */
-uint64_t factorial(uint8_t n) {
-    if (n > 20) {
+uint64_t factorial(uint8_t num) {
+    if (num > 20) {
         throw std::invalid_argument("maximum value is 20\n");
     }
-    if (n == 0) {
+    if (num == 0) {
         return 1;
     }
-    return n * factorial(n - 1);
+    return num * factorial(num - 1);
 }
 }  // namespace math
 
