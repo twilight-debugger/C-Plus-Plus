@@ -29,15 +29,15 @@ namespace fibonacci {
  * @param n the index of the Fibonacci number
  * @returns n-th element of the Fibonacci's sequence
  */
-uint64_t fibonacci(uint64_t n) {
+uint64_t fibonacci(uint64_t num) {
     // If the input is 0 or 1 just return the same (Base Case)
     // This will set the first 2 values of the sequence
-    if (n <= 1) {
-        return n;
+    if (num <= 1) {
+        return num;
     }
 
     // Add the preceding 2 values of the sequence to get next
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    return fibonacci(num - 1) + fibonacci(num - 2);
 }
 }  // namespace fibonacci
 }  // namespace math
